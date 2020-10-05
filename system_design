@@ -1,0 +1,225 @@
+⚙💾🗃☁
+
+💻 What is a System?
+
+    📢 Architecture of collection of technologies or softwares that are connected to each other to serve the certain set of users  to fulfill certain set of requirements
+
+    📢 Factors
+    ✔ Components chosen to serve
+    ✔ Set of Users
+    ✔ Set of requirements
+
+💻 What is design?
+    📢 How everything is intertwined, the process
+    ✔ design of a static website will be different from the live streaming websites
+
+
+💻 Why System Design?
+    📢 Skills that consists of everything
+    ✔ Need to know what are the components to be used, why & where to be used
+    ✔ Point out constraints & painpoints
+    ✔ Figure out pros and cons
+
+💻 Components of System Design
+    📢 Basic building blocks of system design
+
+    Types of components
+    📢 Logical Entities: 
+    ✔ Data
+    ✔ Databases
+    ✔ Applications
+    ✔ Cache 
+    ✔ Message queues
+    ✔ Infrastructure
+    ✔ Communication
+
+    ✔ Databases🖥 <=> Applications💻 <=> Users👨
+    ✔ communication protocol like TCP/HTTP/IP, etc helps communicate & interact between machines where databases and applications are running
+    ✔ Presentation layer can be all the views in mobile app or web app
+    ✔ not all applications might need presentation layer
+    ✔ the components can be run on the cloud services like aws, azure, etc.
+
+
+    📢 Tangible Entities [technologies]
+    ✔ Store text, images, videos ...
+      MongoDB, MySQL, Cassandra ...
+    ✔ Java, Golang, Python, Amber, React, Angular ...
+    ✔ Redis, MemeCache ...
+    ✔ Kafka, RabbitMQ ...
+    ✔ AWS, Google Cloud Platform, Azure ...
+    ✔ APIs, RPCs, Messages ...
+
+     Presentation Layer 💻 <=> Applications💻 <=> Databases🖥 
+
+💻 Client Server Architecture
+    📢 Two-tier architecture
+    ✔ client💻 <=> Server 🖥
+    ✔ Logic and data either sits on client or Server
+
+    📢 three-tier architecture
+    ✔ client💻 <=> Logic🖥 <=> Data 🖥
+    ✔ Logic and data is separated => Application & Database layer
+
+    📢 N-tier architecture
+    ✔ client💻<=> Load balancer <=> Logic🖥<=> Caching <=> Data 🖥
+    ✔ Logic and data is separated => Application & Database layer
+
+    📢How to select the architecture?
+    ✔ Thin clients =>  Majority of processing happens in the backend
+                    Example: E commerce sites, streaming applications
+    ✔ Thick clients => Majority of processing happens in the frontend
+                    Example: Gaming Apps, Video editing software
+    ✔ 2tier example => light weight website for small business
+    ✔ 3tier example => Basic library mgmt for school
+    ✔ N tier example => large scale systems(Gmail, Facebook)
+      
+💻 Proxies 
+    📢 On behalf
+    ✔ used for security
+
+     📢 Forward Proxies 
+     ✔ client💻 <=> Forward Proxies <=> | Server🖥
+     ✔ AKA Client side proxy 
+     ✔ Anonymity of client
+     ✔ disguises a clients IP addresses
+     ✔ block malicious traffic from reaching an origin web Server
+     ✔ improve user's experience by caching external site content
+
+    📢 Reverse Proxies 
+     ✔ client💻 <=> | Reverse Proxies <=>  Server🖥/Server🖥/Server🖥
+     ✔ AKA Server side proxy 
+     ✔ Anonymity of servers
+     ✔ disguises a servers IP addresses
+     ✔ used for traffic control caching the response from servers
+     ✔ Load balancing => distributes the load for app using multiple servers
+     ✔ Provides a single configuration point to manage SSL/technologies
+     ✔ Mitigate the DDoS attacks=> deflates overall impact of distributed denial of services attacks.
+     ✔ Example: VPN, Dark web
+     ✔ Can be use to bypass the blocked websites
+     ✔ Sometimes bottleneck problem might occur
+
+💻 Data & Data Flow
+    📢 Data    
+    📢 Data format/representation    
+    📢 Mechanisms for Data flow    
+    📢 Factors => Type, volume, scale, purpose    
+
+    📢 Layers
+       ✔ Business Layer => text, images, vides, notes ... 
+       ✔ Application Layer => JSON/XML
+       ✔ Data stores => databases- tables, indexes,lists, trees
+       ✔ Network Layer => Packets  
+       ✔ Hardware Layer => 0's & 1's
+
+"Always think about data flow"
+
+    📢 Data stores🖥
+      ✔ Databases => Username, phone ...
+      ✔ Queues => [Send sms request, send email request]
+      ✔ Caches => [Request:Response] 
+      ✔ Indexes => [Most searched items, items searched in last 1 hour]
+
+    📢 Data flow methods <=>
+      ✔ APIs  
+      ✔ Messages  
+      ✔ Events  
+
+    📢 Data generation 
+      ✔ Users => Input
+      ✔ Internal => system populated 
+      ✔ Insights => when user upload or retrieve some data 
+        Example: if a user buys, invoice generation
+                youtube history, payment details, profile details,...
+
+    📢 Factors
+      ✔ Type of data => knowing the type of data is important, images or videos ...  
+      ✔ Volume  => system supporting gb or tb
+      ✔ Consumption / Retrieval => reads /writes
+      ✔ security => transaction, banking
+
+    📢 Types of system
+    Examples
+      ✔ Authorization system => User login, ID management
+      ✔ Streaming system => Netflix, Hotstar, Prime video, ...
+      ✔ Transactional system => Ecommerce, booking rides, grocery, ...
+      ✔ Heavy compute system => image recognition, video processing, using ML models
+
+
+💻 Databases
+    📢 Types of Databases    
+    📢 Pros & Cons 
+    📢 Use Cases   
+    📢 Examples
+
+    📢 Types of Databases   
+      ✔ Relational
+        - Schema => Tables & Rows
+                => Primary key, not null, foreign key, int, varchar, default, etc. are all example of schema constraints
+            Example:
+            Table1: Employees => ID[Primary key], Name, age,dept_id[Foreign key,NOT NULL],acc_id [Foreign key, NOT NULL] 
+            Table1: Department => ID[Primary key], Name, start_date, HOD
+            Table1: Account => ID[Primary key], debit, credit, balance, is_employee
+        => database for inter related complex data can be easily designed
+        => ensures garbage or null value is not populated
+        => ensures all other schema constraints are followed
+
+        - ACID Properties => 
+            => Atomicity: Either All or none
+            => Consistency: Same value for both the request
+            => Isolation: Read and writes are isolated
+            => Durability: Mechanism to guarantee that transactions completed will survive permanently
+
+        - Schema change is difficult to evolve
+        - difficult for horizontal scaling
+
+      ✔ Non-relational => AKA NoSQL Databases
+      - No fixed schemas
+      - Does not follow ACID Properties
+      - different types of relational databases are used for different purposes
+
+      ✔ Key value stores => Application or configuration data
+                        => caching data
+            example: feature, discount, enable cities,...
+
+      ✔ Document based Databases
+      - No fixed schema, supports heavy reads and writes
+      - collections(tables) => documents(rows)
+      - flexible complex dynamic data
+      - highly scalable
+      - sharding
+      - special query operations/aggregations
+      - saved in JSON format
+        example: 
+        [
+            {
+                id:"1",
+                name: "jack",
+                city: 
+                {
+                    id:"2",
+                    name:"la",
+                    state:"california"
+                },
+                country:
+                {
+                    id:"4",
+                    Name:"usa",
+                    code:"US",
+                    continent:"North America"
+                }
+            }
+
+        ]
+
+      ✔ column based Databases
+      - supports large number of heavy writes, special reads
+      - distributed
+      - Example: event data, or streaming data, storing data for songs
+            Cassandra, HBase, Sylla
+     
+      ✔ Search Databases
+      - Supports Full text search queries
+      - Images/Videos, Amazon s3, buckets
+      - Large datasets
+      - Time series
+      - Example: Elastic, Solar, ...
