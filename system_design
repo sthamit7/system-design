@@ -1,5 +1,5 @@
 ⚙💾🗃☁
-
+💾 Part 1
 💻 What is a System?
 
     📢 Architecture of collection of technologies or softwares that are connected to each other to serve the certain set of users  to fulfill certain set of requirements
@@ -17,9 +17,10 @@
 💻 Why System Design?
     📢 Skills that consists of everything
     ✔ Need to know what are the components to be used, why & where to be used
-    ✔ Point out constraints & painpoints
+    ✔ Point out constraints & pain points
     ✔ Figure out pros and cons
 
+💾 Part 2
 💻 Components of System Design
     📢 Basic building blocks of system design
 
@@ -51,6 +52,7 @@
 
      Presentation Layer 💻 <=> Applications💻 <=> Databases🖥 
 
+💾 Part 3
 💻 Client Server Architecture
     📢 Two-tier architecture
     ✔ client💻 <=> Server 🖥
@@ -72,7 +74,8 @@
     ✔ 2tier example => light weight website for small business
     ✔ 3tier example => Basic library mgmt for school
     ✔ N tier example => large scale systems(Gmail, Facebook)
-      
+
+💾 Part 4     
 💻 Proxies 
     📢 On behalf
     ✔ used for security
@@ -98,6 +101,7 @@
      ✔ Can be use to bypass the blocked websites
      ✔ Sometimes bottleneck problem might occur
 
+💾 Part 5
 💻 Data & Data Flow
     📢 Data    
     📢 Data format/representation    
@@ -107,7 +111,7 @@
     📢 Layers
        ✔ Business Layer => text, images, vides, notes ... 
        ✔ Application Layer => JSON/XML
-       ✔ Data stores => databases- tables, indexes,lists, trees
+       ✔ Data stores => databases- tables, indexes, lists, trees
        ✔ Network Layer => Packets  
        ✔ Hardware Layer => 0's & 1's
 
@@ -144,7 +148,7 @@
       ✔ Transactional system => Ecommerce, booking rides, grocery, ...
       ✔ Heavy compute system => image recognition, video processing, using ML models
 
-
+💾 Part 6
 💻 Databases
     📢 Types of Databases    
     📢 Pros & Cons 
@@ -223,3 +227,56 @@
       - Large datasets
       - Time series
       - Example: Elastic, Solar, ...
+
+💾 Part 7
+📢 Anatomy of Applications & services
+💻 Client <=> 💻 Servers
+  ✔ Application in both client and server side have different responsibilities
+  Tech stack
+  ✔ The applications are language agnostic for interacting with each other
+
+  Client Apps => rendering UI elements
+              => handle interactions
+              => collect data
+              => communicate with backend via APIs to fetch/store data
+              => render static data/info
+  Server Apps => Expose API endpoints
+              => house business Logic
+              => handling data modeling/transform
+              => interact with data stores
+              => interact with other services           
+💻 Elements/factors of app design/development
+              => requirements - gather requirements
+              => layer - web/mobile/desktop/backend app
+              => tech stack - which language to use
+              => code structures / design pattern
+              => data store interactions
+              => performance cost
+              => deployment
+              => monitoring
+              => operations excellence /reliability
+
+💾 Part 8
+💻 Application Programming Interface (API)
+📢 What is API?
+    ✔ one piece of code interacting with another which can run on different machine.
+    ✔ Advantages => communication 
+                => Abstraction
+                => platform agnostic
+
+📢 Examples and usecases
+📢 Types of APIs
+
+    ✔ Private APIs => hidden APIs
+    ✔ Public APIs => available for Public,
+    ✔ web APIs => superset of private & public, get,post...
+    ✔ SDK/library => lock,fork, join, release lock
+
+📢 API Factors => API contracts
+                => Documentation
+                => Data format
+                => security
+
+📢 API Standards => RPC
+                => SOAP
+                => REST
