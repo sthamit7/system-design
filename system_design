@@ -280,3 +280,55 @@
 📢 API Standards => RPC
                 => SOAP
                 => REST
+
+💾 Part 9 
+💻 Cache
+  📢 What is Cache?
+      ✔ a hardware or a software component which helps in serving the data which is frequently requested or expensive to compute on, so cache saves this request.
+      ✔ cache example => server side cache (reverse proxy)
+              => browser cache (client side)
+              => similar redundant request and response is saved in cache memory
+
+  📢 invalidation and eviction  
+     ✔ Cache invalidation => data should be changed in some time, updating old value with a new value in cache is cache invalidation
+         => TTL - Time to live (expiry date for the cache)
+     ✔ Cache eviction - when old cache has to be evicted for new keys
+                      => FIFO - first in first out (first inserted is evicted)
+                      => LRU - Least recently used (oldest is evicted)
+                      => LFU - Least frequently used (less times used evicted)
+  
+  📢 Cache pattern
+    ✔ Cache aside strategy/Patterns -application communication with cache doesnot communicate with Database
+                      => Advantage - when cache fails, application can still serve using database
+                      => supports heavy reads
+                      => works even if cache is down
+                      => TTL/application code have to be used keep DB and cache consistent
+
+                      => disadvantage - to decide about cache long expiry or application code to refresh cache
+
+
+    ✔ Cache read through strategy/pattern - cache sits between application & database
+                                           - application only communicates with cache
+                       => Advantage - read heavy work 
+                       => great alternate for read heavy workloads, example: newsfeed
+                       => data modeling of cache and db has to be smaller
+      
+                        => disadvantage - first request always miss cache. (can be solved by preloading the cache)
+  
+    ✔ Cache write through strategy/pattern - similar to read through, application will read & write in cache.           => Advantage - can directly write to cache
+                        => disadvantage - extra layer of latency of reading from cache (can be solved using write around pattern)
+    
+    ✔ Cache write around strategy/pattern- writes directly to db but reads from cache
+
+    ✔ Cache write back strategy/pattern- writes is saved in cache and writing in db later in bulk
+                        => Advantage - useful for write heavy workloads
+                                    - db failure can be sustained for the time cache keeps data in bulk
+                                    - used by various DB's internal implementation
+                                    - cache failure results in system failure
+
+  📢 Where is my cache?
+      => can be in client browser
+      => can be in forward proxy
+      => can be in reverse proxy
+      => can be in application code
+      => can be outside database
