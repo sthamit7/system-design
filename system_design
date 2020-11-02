@@ -330,5 +330,103 @@
       => can be in client browser
       => can be in forward proxy
       => can be in reverse proxy
-      => can be in application code
+      => can be in application 
       => can be outside database
+
+💾 Part 10     
+💻 REST APIs
+    📢 What is REST?
+        ✔ Representational State Transfer
+        ✔ how data is exchanged between client and server 
+        ✔ Follows 6 guidelines 
+        ✔ Architecture Style for Web API from the thesis of Roy Fielding
+        ✔ Uses XML or JSON to send & receive the data
+        ✔ simply calls services via URL path
+        ✔ result is readable which is just plain XML or JSON
+        ✔ Transfer is over HTTP only
+        ✔ Easy to call from JavaScript
+        ✔ performance much better than SOAP, less CPU intensive, leaner code, etc.
+        ✔ Resources => URI, Uniform Interface - Methods, Representational 
+        ✔ Protocol => Client-server, 
+                    => stateless - one server gets multiple request from same or different clients
+                    => cacheable
+                    => layered
+                    => Uniform interface
+                    => code on demand(optional)- a server can send code to client that it should execute in runtime(like Java Applets or JavaScript)
+        ✔ Hypermedia as the Engine of application state. (HATEOAS)
+       Advantages - Efficiency
+                  - scalable
+                  - User perceived performance
+           
+           
+    📢 HTTP methods - GET => retrieve data from a specified Resource
+                       POST => submit data to be processed to a specific Resources
+                       PUT => update a specified Resource
+                       DELETE => delete a specified Resource
+                       HEAD => same as get but does not return a body
+                       OPTIONs=> returns the supported HTTP methods
+                       PATCH => Update partial Resources
+
+    📢 End points - URI/URL where api/services can be accessed by a client app
+                  - Get => https://mysite.com/api/users
+                  - Get => https://mysite.com/api/users/1 or users/details/1
+                  - Post => https://mysite.com/api/users
+                  - Put => https://mysite.com/api/users/1 or users/update/1
+                  - delete => https://mysite.com/api/users/1 or user/delete/1                    
+
+    📢 State transfer & stateless
+        ✔ State transfer - state of data that is being transferred from server to client
+        ✔ Stateless - multiple clients requesting for one server, server is unknown to the state of the client request, hence stateless.
+
+    📢 Path vs Query params
+        ✔ Path params - specific resource via path using id in the URI
+        ✔ Query params - specific resource using query in the URI
+    
+    📢 HTTP status codes
+        ✔ 1xx => informal error
+        ✔ 2xx => success 
+        ✔ 3xx => redirection
+        ✔ 4xx => client error 
+        ✔ 5xx => server error
+
+    📢 Security, Authorization & Error handling 
+
+
+    📢 Difference in SOAP and REST
+        ✔ Analogy => SOAP is like envelope & REST is like postcard. SOAP being more secure
+        ✔ SOAP => XML based message protocol
+              => uses WSDL for communication between consumer & provider
+              => invokes services by calling RPC
+              => does not return human readable results
+              => transfer is over HTTP, Also uses other protocol such as SMTP, FTP,etc.
+              => JavaScript can call SOAP, but difficult to implementation
+              => performance not great compare to REST
+     
+    📢 API Gateway
+        ✔ component acts as an entry point for APIs
+        ✔ Security
+        ✔ Authenticated
+        ✔ Authorization
+        ✔ SSL termination
+        ✔ DDoS protection/ Throttling
+        
+        Features
+        ✔ Separate cross cutting concerns 
+        ✔ Separate and consolidate cross cutting concerns across microservices
+        ✔ Replacing multiple clients calls with single API call 
+        ✔ Reverse proxy: serving static content; caching responses
+        ✔ Routing based on headers, paths & params,etc. 
+        ✔ Load balancing, A/B testing, Canary releases
+
+        Self managed
+        ✔ Apache
+        ✔ HAProxy
+        ✔ NGINX
+        ✔ Spring Cloud Gateway
+
+        Cloud services
+        ✔ AWS API Gateway
+        ✔ Azure API Gateway
+        ✔ Google Cloud endpoints
+        ✔ Apigee
+      
