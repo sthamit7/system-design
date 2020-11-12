@@ -430,3 +430,46 @@
         ✔ Google Cloud endpoints
         ✔ Apigee
       
+💾 Part 11     
+💻 Message Queues
+    📢 Sync & Async
+       📢 Synchronous communication => Information/data is shared in real time
+                No wait, direct & immediate communication, analogy-phone communication
+
+       📢 asynchronous communication => Information/data is independent of time, 
+                Wait for response, analogy - email, chat, etc. immediate response not necessary
+            ✔ Real time analogy 1 => customers waiting in the bank, either queue or token system
+                                    - Larger number of customer served though delay
+            ✔ Online store => when ordered the store says successfully order placed.
+                            => larger number of customers requesting for invoice history will be queued
+                            => the invoice will be sent to their specific email
+
+    📢 What is Message Queues?
+        ✔ are middleware used by different parts of the system (producers/consumers) to communicate or process operations asynchronously
+        ✔ process which has data structure in the memory to store the messages
+        ✔ could be process running in the same machine or different interacting with each other
+        ✔ E.g. - Kafka, SQS, RabbitMQ
+
+    📢 Models: Producer & Consumer
+        ✔ Producer => add messages to the queue which has to be processed
+        ✔ Consumer => carries out the message and start operation
+
+        order=> FIFO - Amazon SQS- the next message cannot be consumed until it processed the first one
+                => downside is it stops processing if one of the processing fails 
+
+                => ordered MQs (e.g. text messages)
+                => unordered MQs (eg. invoice generation request)
+        consumption => one to one - Producer consumer model
+                    =>One to many - Publish subscriber model
+
+    📢 Advantages & disadvantage
+        ✔ producers can help when all the load can be enqueued & decoupling
+        ✔ when there is load consumers rate can be increased & dequeued
+        ✔ sending emails, decoupling 
+        ✔ bulk operations can be handled
+        
+        
+
+
+
+    
