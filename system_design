@@ -2,7 +2,8 @@
 💾 Part 1
 💻 What is a System?
 
-    📢 Architecture of collection of technologies or softwares that are connected to each other to serve the certain set of users  to fulfill certain set of requirements
+    📢 Architecture of collection of technologies or softwares that are connected
+     to each other to serve the certain set of users  to fulfill certain set of requirements
 
     📢 Factors
     ✔ Components chosen to serve
@@ -35,7 +36,8 @@
     ✔ Communication
 
     ✔ Databases🖥 <=> Applications💻 <=> Users👨
-    ✔ communication protocol like TCP/HTTP/IP, etc helps communicate & interact between machines where databases and applications are running
+    ✔ communication protocol like TCP/HTTP/IP, etc helps communicate & interact
+    between machines where databases and applications are running
     ✔ Presentation layer can be all the views in mobile app or web app
     ✔ not all applications might need presentation layer
     ✔ the components can be run on the cloud services like aws, azure, etc.
@@ -89,7 +91,7 @@
      ✔ improve user's experience by caching external site content
 
     📢 Reverse Proxies 
-     ✔ client💻 <=> | Reverse Proxies <=>  Server🖥/Server🖥/Server🖥
+     ✔ client💻 <=> | Reverse Proxies <=>  Server🖥
      ✔ AKA Server side proxy 
      ✔ Anonymity of servers
      ✔ disguises a servers IP addresses
@@ -469,7 +471,8 @@
         ✔ bulk operations can be handled
         
         
-
+💾 Part 12     
+💻 Message Queues
 
 
     
