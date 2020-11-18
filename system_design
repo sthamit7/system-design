@@ -472,7 +472,21 @@
         
         
 💾 Part 12     
-💻 Message Queues
+💻 Pub-sub Messaging => Analogy - Broadcast message
+                    => Publisher => Similar to producer, publishes the message via input channel
+                    => subscriber => similar to consumer, consumers or reacts to the messages via output channel
+                    => Message broker => modifies data to the outpur channel, 
+                                     => divides the messages to rdifferent responsible subscribers
+                
+                Example: Analogy of Ecommerce site
+                    => Order placed can be published using publisher
+                    => Order Id messages sent to input channel
+                    => Message broker fetches details from Order Id and sends to the output channel
+                    => SMS, Email, Logs, Order processing are the subscribers 
+                    => based on the published data, the subscribers reacts based on their responsibilities
 
 
-    
+                Factors => Message Ordering
+                        => Message consumption
+                        => Posion Messages
+                        => Duplicate Messages
