@@ -490,3 +490,13 @@
                         => Message consumption
                         => Posion Messages
                         => Duplicate Messages
+
+    Usecases => Async workflow - adding to cart is sync workflow but process after added to cart can be async workflow
+             => decoupling - continuous UI clicks or events can be in a queue
+             => load balancing - balancing heavy throughput, by adding subscribers for a multiple events from publishers
+             => deferred processing - according to the scheduled time the events are processed
+             => data streaming 
+
+            When to not to use => limited number of orders not required to use this pattern
+                               => for real time systems
+                            
