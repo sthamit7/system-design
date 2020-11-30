@@ -490,7 +490,8 @@
                         => Message consumption
                         => Posion Messages
                         => Duplicate Messages
-
+💾 Part 13  
+💻 Pub-sub Usecases
     Usecases => Async workflow - adding to cart is sync workflow but process after added to cart can be async workflow
              => decoupling - continuous UI clicks or events can be in a queue
              => load balancing - balancing heavy throughput, by adding subscribers for a multiple events from publishers
@@ -499,4 +500,14 @@
 
             When to not to use => limited number of orders not required to use this pattern
                                => for real time systems
-                            
+
+💾 Part 14   
+💻 Performance Metrics
+    📢throughput => Load/Time taken or Work done/ time taken
+      How can it be increased? => In system we determine the number of API calls served per unit time
+
+    📢Bandwidth => Higher Bandwidth, higher resources => higher throughput
+
+    📢Response time => Higher throughput can be effected if less response time
+
+    Resource <=> bandwidth <=> Response time <=> throughput
